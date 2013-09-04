@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/basemobile")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Brand")
+</head>
+<body>
+    <div id="viewport" class="hidden">
+        <div id="carosal">
+            <div id="primaryNav">
+                <div id="navMenu" class="navMenu"></div>
+                <div class="navLogo"></div>
+                <div class="navSearch"></div>
+            </div>
+        </div>
+        <div id="mainContainer">
+            <!-- Content -->
+            <div id="mainContentContainer">
+                <div id="mainContent">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquerymobile")
+    @Scripts.Render("~/bundles/orchestrator")
+    @Scripts.Render("~/bundles/viewcontrollers")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
