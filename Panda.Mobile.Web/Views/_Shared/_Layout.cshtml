@@ -13,23 +13,11 @@
     @Styles.Render("~/Content/Brand")
 </head>
 <body>
-    <div id="viewport" class="hidden">
-        <div id="carosal">
-            <div id="primaryNav">
-                <div id="navMenu" class="navMenu"></div>
-                <div class="navLogo"></div>
-                <div class="navSearch"></div>
-            </div>
-        </div>
-        <div id="mainContainer">
-            <!-- Content -->
-            <div id="mainContentContainer">
-                <div id="mainContent">
-                    @RenderBody()
-                </div>
-            </div>
-        </div>
-    </div>
+
+    
+    @RenderBody()
+  
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jquerymobile")
     @Scripts.Render("~/bundles/orchestrator")
